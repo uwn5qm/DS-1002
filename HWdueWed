@@ -1,0 +1,177 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP0PYSiHJKHiHIXQkn7Wa4c",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/uwn5qm/DS-1002/blob/main/HWdueWed\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QYh1kGmjJ5pb",
+        "outputId": "e0532ecc-0296-4b19-b680-0967978a3831"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Collecting english_words\n",
+            "  Downloading english-words-2.0.1.tar.gz (8.2 MB)\n",
+            "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m8.2/8.2 MB\u001b[0m \u001b[31m21.2 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "\u001b[?25h  Installing build dependencies ... \u001b[?25l\u001b[?25hdone\n",
+            "  Getting requirements to build wheel ... \u001b[?25l\u001b[?25hdone\n",
+            "  Preparing metadata (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\n",
+            "Building wheels for collected packages: english_words\n",
+            "  Building wheel for english_words (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\n",
+            "  Created wheel for english_words: filename=english_words-2.0.1-py3-none-any.whl size=8196238 sha256=8619cb9e49ea19f9fdcea15c5de071a9f97cfff82f67f0d9905da797177d0830\n",
+            "  Stored in directory: /root/.cache/pip/wheels/f0/e6/d9/16a123647999fe535f03a36e7af23eef203736d84c7ca25b0b\n",
+            "Successfully built english_words\n",
+            "Installing collected packages: english_words\n",
+            "Successfully installed english_words-2.0.1\n"
+          ]
+        }
+      ],
+      "source": [
+        "!pip install english_words\n",
+        "from english_words import get_english_words_set\n",
+        "words = get_english_words_set(['web2'], lower=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(words)\n",
+        "wordlist = list(words)\n",
+        "type(wordlist)\n",
+        "len(wordlist)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DHJq-0CIKDWj",
+        "outputId": "34d9b71c-f471-4dcf-f787-435ca46cf465"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "234450"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(wordlist[0:11])\n",
+        "# I notice that I don't know many of these words, and they do not appear to be in alphabetical order"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QoNSD8YVKkKS",
+        "outputId": "6a844700-0d92-441d-f6f7-e391f5905a0e"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['schizanthus', 'cynomorpha', 'hexagonally', 'tupakihi', 'redressive', 'tealeafy', 'nucellus', 'bringal', 'achaemenid', 'ligustrum', 'reoperation']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alpha_list = sorted(wordlist)\n",
+        "print(alpha_list[0:11])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cQp1Wty_KxAx",
+        "outputId": "1ab0c0de-3275-475e-9ca2-8fc26a4c8fac"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['a', 'aa', 'aal', 'aalii', 'aam', 'aani', 'aardvark', 'aardwolf', 'aaron', 'aaronic', 'aaronical']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(alpha_list[16981:16983])\n",
+        "# 16,982 words start with 'a'. I just brute forced / trial and errored this until I found where the As ended and Bs began."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c-xInKa1LC2J",
+        "outputId": "8746c9ef-2ec4-4831-881e-a2493b2f52af"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['azymous', 'b']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "iJuOBxysLvzH"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
