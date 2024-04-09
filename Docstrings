@@ -1,0 +1,57 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPZyAKBuS641Z0B2kt2eCZj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/uwn5qm/DS-1002/blob/main/Docstrings\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7B6tZIV0Y32Q"
+      },
+      "outputs": [],
+      "source": [
+        "  '''\n",
+        "  Takes two lists of the same length and counts how many elements occur in both, regardless of position.\n",
+        "  '''\n",
+        "  '''\n",
+        "  Takes two lists of the same length and counts how many elements are the same but are in different positions.\n",
+        "  '''\n",
+        "  '''\n",
+        "  Builds a string in which you can specify total length, numbers of Bs, and number of Cs.\n",
+        "  '''\n",
+        "  '''\n",
+        "  Takes two lists of the same length and prints the number of bulls, cows, and misses.\n",
+        "  '''\n",
+        "  '''\n",
+        "  Prompts user for input, then ensures the input meets all of the required criteria.\n",
+        "  '''\n",
+        "\n",
+        "  #You could incorporate characters into the guesses, which would make the game much harder and require you to accept characters as valid inputs for the game."
+      ]
+    }
+  ]
+}
